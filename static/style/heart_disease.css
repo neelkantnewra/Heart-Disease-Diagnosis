@@ -137,18 +137,18 @@
     text-align: center;
 }
 
-[type=radio] { 
+.question-gender [type=radio] { 
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
   }
 
-[type=radio]:checked + i{
+  .question-gender [type=radio]:checked + i{
     color: green;
   }
 
-[type=radio] + i{
+  .question-gender [type=radio] + i{
     cursor: pointer;
   }
 
@@ -200,3 +200,60 @@
   }
 
 
+/* Chest pain type */
+
+.question-chest-pain-type .question{
+    color:white;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-chest-pain-type .option .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-chest-pain-type .option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.question-chest-pain-type [type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-chest-pain-type [type=radio]:checked + p{
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+
+.question-chest-pain-type [type=radio] + p{
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
