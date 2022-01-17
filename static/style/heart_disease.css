@@ -1,0 +1,202 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgb(255, 255, 255) 100%);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-radius: 20px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #0704aa;
+    color: white;
+  }
+  .topnav span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .topnav span:after {
+    color: #fff;
+    content: '\276e';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+ .topnav a:hover span {
+    padding-left: 25px;
+  }
+  .topnav a:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+
+.heading{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+
+.container{
+    width: 100%;
+  margin: auto !important;
+  display: block;
+  height: 500px;
+  position: relative;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* style the card */
+.main-frame{
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 80%;
+    height: 600px;
+    top: 50px;
+    left: 100px;
+    position: absolute;
+    cursor: hand;
+}
+
+.sub-frame{
+    border-radius:10px;
+    padding-top: 10px;
+    background-color: rgb(23, 30, 99);
+    height: 500px;
+    padding-bottom: 60px;
+}
+
+.button{
+    cursor: pointer;
+    border-radius: 60px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    margin-left: 45%;
+    margin-top: 15px;
+}
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\276f';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+/* what is your gender */
+
+.question-gender .question{
+    color: rgb(255, 255, 255);
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+[type=radio]:checked + i{
+    color: green;
+  }
+
+[type=radio] + i{
+    cursor: pointer;
+  }
+
+.question-gender .option{
+    text-align: center;
+    font-size: 300px;
+    color:gray;
+}
+
+/* What is your age? */
+
+.question-age .question{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-age .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.range-wrap {
+    position: relative;
+    margin: 0 auto 3rem;
+  }
+  .range {
+      cursor: pointer;
+    width: 100%;
+  }
+  .bubble {
+    border-radius: 60px;
+    background: rgba(255, 0, 0, 0.863);
+    color: white;
+    padding: 10px 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bubble::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: red;
+    top: -1px;
+    left: 50%;
+  }
+
+

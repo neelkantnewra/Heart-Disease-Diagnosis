@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Titillium+Web:wght@400&display=swap');
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgba(54, 33, 128, 0.233);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-radius: 20px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+      border-radius: 0px;
+    background-color: #0704aa;
+    color: white;
+  }
+
+.information{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+.info{
+    padding-left: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+  
+}
+
+ /* style heart */
+
+.heart{
+    font-size: 455px;
+    color: rgba(43, 45, 153, 0.678);
+}
+
+.heart i:hover{
+    animation: heart-rotate-before 3ms both infinite;
+  }
+
+  @keyframes heart-rotate-before {
+    from {
+      color: rgba(43, 45, 153, 0.678);
+      font-size: 440px;
+    }
+  
+    to {
+      color: rgba(252, 18, 18, 0.863);
+      font-size: 455px;
+    }
+  }

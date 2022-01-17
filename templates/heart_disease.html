@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/heart_disease.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Model: Heart Disease Predictor</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/"> <span> Home </span></a>
+        <div class="heading">Heart Disease Predictor</div>
+    </div>
+    <!-- card structure -->
+    <div class="container">
+
+        <!-- Tell me your age  -->
+
+        <div class="main-frame" style="display:block" id="div1">
+            <div class="sub-frame">
+                <div class="question-age">
+                    <div class="question">Can I Know your Age?</div>
+                    <div class="option">
+                        <div class="range-wrap">
+                            <input type="range" class="range" min="1" max="120">
+                            <output class="bubble"></output>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div1','div2')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Can I know your gender -->
+        <div class="main-frame" id="div2" style="display:none">
+            <div class="sub-frame">
+                <div class="question-gender">
+                    <div class="question">Can I know your Gender?</div>
+                    <div class="option">
+                        <label for="male">
+                            <input type="radio" name="gender" id="male" value="0" checked> <i class="fa fa-male"></i>
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="gender" id="female" value="1"><i class="fa fa-female"></i>
+                        </label>
+                    </div>
+                    <button class="button" onclick="replace('div2','div3')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- What type of chest pain you have? -->
+        <div class="main-frame" id="div3" style="display:none">
+            <div class="sub-frame">
+                <div class="question-chest-pain-type">
+                    <div class="question">What type of chest pain you have?</div>
+                    <div class="option">
+                        
+                    </div>
+                    <button class="button" onclick="replace('div3','div1')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script/heart_disease.js"></script>
+</body>
+
+</html>
