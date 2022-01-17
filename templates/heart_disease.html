@@ -61,8 +61,8 @@
                         <div class="col">
                             <div class="row">
                                 <label for="typical-agina">
-                                    <input type="radio" name="chest-pain-type" id="typical-agina" value="0" checked >
-                                    <p>  Typical Agina  </p>
+                                    <input type="radio" name="chest-pain-type" id="typical-agina" value="0" checked>
+                                    <p> Typical Agina </p>
                                 </label>
                             </div>
                             <div class="row">
@@ -72,7 +72,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class= "col">
+                        <div class="col">
                             <div class="row">
                                 <label for="non-aginal-pain">
                                     <input type="radio" name="chest-pain-type" id="non-aginal-pain" value="2">
@@ -87,7 +87,61 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button" onclick="replace('div3','div1')"> <span> Next </span> </button>
+                    <button class="button" onclick="replace('div3','div4')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Is your fasting blood sugar > 120 mg/dl -->
+
+        <div class="main-frame" id="div4" style="display:none">
+            <div class="sub-frame">
+                <div class="question-fasting-blood-sugar">
+                    <div class="question">Is your fasting blood sugar > 120 mg/dl?</div>
+                    <div class="option">
+                        <div class="col">
+                            <div class="row">
+                                <label for="fbs-yes">
+                                    <input type="radio" name="fasting-blood-sugar" id="fbs-yes" value="1" checked>
+                                    <p> Yes </p>
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label for="fbs-no">
+                                    <input type="radio" name="fasting-blood-sugar" id="fbs-no" value="0">
+                                    <p>No</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div4','div5')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Do your exercise induced angina? -->
+
+        <div class="main-frame" id="div5" style="display:none">
+            <div class="sub-frame">
+                <div class="question-induced-agina">
+                    <div class="question">Do your exercise induced angina?</div>
+                    <div class="option">
+                        <div class="col">
+                            <div class="row">
+                                <label for="ag-yes">
+                                    <input type="radio" name="induced-agina" id="ag-yes" value="1" checked>
+                                    <p> Yes </p>
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label for="ag-no">
+                                    <input type="radio" name="induced-agina" id="ag-no" value="0">
+                                    <p>No</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div5','div1')"> <span> Next </span> </button>
                 </div>
             </div>
         </div>

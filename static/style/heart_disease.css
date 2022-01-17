@@ -257,3 +257,119 @@
     margin-top: 20px;
     color:rgb(153, 150, 150);
 }
+
+/* Is your fasting blood sugar > 120 mg/dl */
+.question-fasting-blood-sugar .question{
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-fasting-blood-sugar .option .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-fasting-blood-sugar .option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.question-fasting-blood-sugar [type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-fasting-blood-sugar [type=radio]:checked + p{
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-fasting-blood-sugar [type=radio] + p{
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+
+/* Do your fasting induced angina */
+.question-induced-agina .question{
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+   padding-bottom: 50px;
+}
+
+.question-induced-agina .option .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-induced-agina .option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+
+.question-induced-agina [type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-induced-agina [type=radio]:checked + p{
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-induced-agina [type=radio] + p{
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
