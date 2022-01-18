@@ -391,7 +391,7 @@
 }
 
 
-/* what is the slop of your peak exercise ST segment? */
+/* what is the slope of your peak exercise ST segment? */
 
 .question-st-segment .question{
     color:white;
@@ -448,3 +448,99 @@
     color:rgb(153, 150, 150);
 }
 
+/* What is your ST depression value induced by exercise */
+
+.question-st-depression .question{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-st-depression .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* Tell me the maximum heart-rate achieved by you? */
+
+.question-heart-rate .question{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-heart-rate .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* Enter your serum cholestrol in mg/dl? */
+.question-serum-cholestrol .question{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-serum-cholestrol .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+.question-resting-ecg .question{
+    color:white;
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.question-resting-ecg .option{
+    display: flex;
+    flex-direction: column;
+    padding-left: 400px;
+    padding-right: 400px;
+
+}
+
+
+.question-resting-ecg [type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-resting-ecg [type=radio]:checked + p{
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:350px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-resting-ecg [type=radio] + p{
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:350px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}

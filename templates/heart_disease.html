@@ -162,14 +162,13 @@
             </div>
         </div>
 
-        <!-- what is the slop of your peak exercise ST segment? -->
-       
+        <!-- what is the slope of your peak exercise ST segment? -->
+
         <div class="main-frame" style="display:none" id="div7">
             <div class="sub-frame">
                 <div class="question-st-segment">
-                    <div class="question">what is the slop of your peak exercise ST segment?</div>
+                    <div class="question">what is the slope of your peak exercise ST segment?</div>
                     <div class="option">
-
                         <div class="col">
                             <div class="row">
                                 <label for="upsloping">
@@ -184,7 +183,6 @@
                                 </label>
                             </div>
                         </div>
-
                         <div class="col">
                             <div class="row">
                                 <label for="downsloping">
@@ -193,12 +191,90 @@
                                 </label>
                             </div>
                         </div>
-
                     </div>
-                    <button class="button" onclick="replace('div7','div1')"> <span> Next </span> </button>
+                    <button class="button" onclick="replace('div7','div8')"> <span> Next </span> </button>
                 </div>
             </div>
         </div>
+
+         <!-- What is your ST depression value induced by exercise  -->
+         <div class="main-frame" style="display:none" id="div8">
+            <div class="sub-frame">
+                <div class="question-st-depression">
+                    <div class="question">What is your ST depression value, induced by exercise, relative to rest?</div>
+                    <div class="option">
+                        <div class="range-wrap">
+                            <input type="range" class="range" name="st-depressed-value" min="-10" max="10" step="0.01">
+                            <output class="bubble"></output>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div8','div9')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tell me the maximum heart-rate achieved by you? -->
+        <div class="main-frame" style="display:none" id="div9">
+            <div class="sub-frame">
+                <div class="question-heart-rate">
+                    <div class="question">Tell me the maximum heart-rate achieved by you?</div>
+                    <div class="option">
+                        <div class="range-wrap">
+                            <input type="range" class="range" name="heart-rate-value" min="50" max="250" >
+                            <output class="bubble"></output>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div9','div10')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enter your serum cholestrol in mg/dl -->
+        <div class="main-frame" style="display:none" id="div10">
+            <div class="sub-frame">
+                <div class="question-serum-cholestrol">
+                    <div class="question">Enter your serum cholestrol in mg/dl?</div>
+                    <div class="option">
+                        <div class="range-wrap">
+                            <input type="range" class="range" name="serum-cholestrol-value" min="0" max="800">
+                            <output class="bubble"></output>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div10','div11')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Which of this is your resting ElectroCardioGraph (ECG) -->
+        <div class="main-frame" id="div11" style="display:none">
+            <div class="sub-frame">
+                <div class="question-resting-ecg">
+                    <div class="question"> Which of this is your resting ElectroCardioGraph (ECG)?</div>
+                    <div class="option">
+                        <div class="col">
+                            
+                                <label for="ecg-normal">
+                                    <input type="radio" name="resting-ecg" id="ecg-normal" value="0" checked>
+                                    <p> Normal </p>
+                                </label>
+                            
+                          
+                                <label for="ecg-abnormal">
+                                    <input type="radio" name="resting-ecg" id="ecg-abnormal" value="1">
+                                    <p>Having ST - T wave abnormality</p>
+                                </label>
+
+                                <label for="ecg-hyper">
+                                    <input type="radio" name="resting-ecg" id="ecg-hyper" value="2">
+                                    <p>Left ventricular hypertrophy</p>
+                                </label>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div11','div1')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <script src="/static/script/heart_disease.js"></script>
 </body>
