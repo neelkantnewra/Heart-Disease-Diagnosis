@@ -373,3 +373,78 @@
     margin-top: 20px;
     color:rgb(153, 150, 150);
 }
+
+
+/* What is you systolic blood pressure */
+
+.question-resting-systolic .question{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 30px;
+    text-align: center;
+}
+.question-resting-systolic .option{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* what is the slop of your peak exercise ST segment? */
+
+.question-st-segment .question{
+    color:white;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.question-st-segment .option .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(255, 254, 254);
+}
+
+.question-st-segment .option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+
+.question-st-segment [type=radio]{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.question-st-segment [type=radio]:checked + p{
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(44, 233, 44);
+    font-size: 26px;
+    border: 3px solid;
+    width:300px;
+    height:50px;
+    padding-top: 20px;
+}
+
+.question-st-segment [type=radio] + p{
+    padding-top: 20px;
+    text-align: center;
+    cursor:pointer;
+    font-size: 24px;
+    border: 2px solid;
+    width:300px;
+    height:50px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color:rgb(153, 150, 150);
+}
+

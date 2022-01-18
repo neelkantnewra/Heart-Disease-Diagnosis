@@ -25,7 +25,7 @@
                     <div class="question">Can I Know your Age?</div>
                     <div class="option">
                         <div class="range-wrap">
-                            <input type="range" class="range" min="1" max="120">
+                            <input type="range" name="age" class="range" min="1" max="120">
                             <output class="bubble"></output>
                         </div>
                     </div>
@@ -41,10 +41,10 @@
                     <div class="question">Can I know your Gender?</div>
                     <div class="option">
                         <label for="male">
-                            <input type="radio" name="gender" id="male" value="0" checked> <i class="fa fa-male"></i>
+                            <input type="radio" name="gender" id="male" value="1" checked> <i class="fa fa-male"></i>
                         </label>
                         <label for="female">
-                            <input type="radio" name="gender" id="female" value="1"><i class="fa fa-female"></i>
+                            <input type="radio" name="gender" id="female" value="0"><i class="fa fa-female"></i>
                         </label>
                     </div>
                     <button class="button" onclick="replace('div2','div3')"> <span> Next </span> </button>
@@ -61,13 +61,13 @@
                         <div class="col">
                             <div class="row">
                                 <label for="typical-agina">
-                                    <input type="radio" name="chest-pain-type" id="typical-agina" value="0" checked>
+                                    <input type="radio" name="chest-pain-type" id="typical-agina" value="1" checked>
                                     <p> Typical Agina </p>
                                 </label>
                             </div>
                             <div class="row">
                                 <label for="atypical-agina">
-                                    <input type="radio" name="chest-pain-type" id="atypical-agina" value="1">
+                                    <input type="radio" name="chest-pain-type" id="atypical-agina" value="2">
                                     <p>Atypical Agina</p>
                                 </label>
                             </div>
@@ -75,13 +75,13 @@
                         <div class="col">
                             <div class="row">
                                 <label for="non-aginal-pain">
-                                    <input type="radio" name="chest-pain-type" id="non-aginal-pain" value="2">
+                                    <input type="radio" name="chest-pain-type" id="non-aginal-pain" value="3">
                                     <p>Non-aginal pain</p>
                                 </label>
                             </div>
                             <div class="row">
                                 <label for="Asymptomatic">
-                                    <input type="radio" name="chest-pain-type" id="Asymptomatic" value="3">
+                                    <input type="radio" name="chest-pain-type" id="Asymptomatic" value="4">
                                     <p> Asymptomatic</p>
                                 </label>
                             </div>
@@ -141,7 +141,61 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button" onclick="replace('div5','div1')"> <span> Next </span> </button>
+                    <button class="button" onclick="replace('div5','div6')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- what is your resting systolic blood pressure?  -->
+        <div class="main-frame" style="display:none" id="div6">
+            <div class="sub-frame">
+                <div class="question-resting-systolic">
+                    <div class="question">What is your resting systolic blood pressure?</div>
+                    <div class="option">
+                        <div class="range-wrap">
+                            <input type="range" class="range" name="resting-blood-pressure" min="50" max="170">
+                            <output class="bubble"></output>
+                        </div>
+                    </div>
+                    <button class="button" onclick="replace('div6','div7')"> <span> Next </span> </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- what is the slop of your peak exercise ST segment? -->
+       
+        <div class="main-frame" style="display:none" id="div7">
+            <div class="sub-frame">
+                <div class="question-st-segment">
+                    <div class="question">what is the slop of your peak exercise ST segment?</div>
+                    <div class="option">
+
+                        <div class="col">
+                            <div class="row">
+                                <label for="upsloping">
+                                    <input type="radio" name="peak-exercise-st" id="upsloping" value="1" checked>
+                                    <p> Up Sloping </p>
+                                </label>
+                            </div>
+                            <div class="row">
+                                <label for="flat">
+                                    <input type="radio" name="peak-exercise-st" id="flat" value="2">
+                                    <p>Flat</p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+                                <label for="downsloping">
+                                    <input type="radio" name="peak-exercise-st" id="downsloping" value="3">
+                                    <p> Down Sloping </p>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="button" onclick="replace('div7','div1')"> <span> Next </span> </button>
                 </div>
             </div>
         </div>
