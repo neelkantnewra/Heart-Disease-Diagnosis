@@ -3,8 +3,11 @@
 Package dependency
 
 `python -m venv hsd-venv`
+
 `source sklearn-venv/bin/activate`
+
 `pip install Flask`
+
 `pip install -U scikit-learn`
 
 
