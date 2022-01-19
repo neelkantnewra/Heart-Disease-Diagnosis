@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Titillium+Web:wght@400&display=swap');
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
@@ -51,3 +52,36 @@
     font-weight: bolder;
     color: #ffffff;
 }
+
+table{
+    width:100%;
+}
+th {
+    background-color: #0d0a91;
+    color: white;
+    position: sticky;
+  }
+  
+th, td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+.information{
+    font-family: 'Titillium Web', sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.info{
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 60%;
+}
+
+.info .title{
+    padding-bottom: 10px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

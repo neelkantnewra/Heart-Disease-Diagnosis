@@ -20,26 +20,118 @@
 
             <table>
                 <tr>
-                  <th>Question</th>
-                  <th>Answer</th>
+                    <th>Question</th>
+                    <th>Answer</th>
                 </tr>
                 <tr>
-                  <td>Can I Know your Age?</td>
-                  <td>{{results.age}}</td>
+                    <td>Can I Know your Age?</td>
+                    <td>{{results.age}}</td>
+                </tr>
+
+                <tr>
+                    <td>Can I know your Gender?</td>
+                    <td>
+
+                        {% if results.gender == '0' %}
+                        Female
+                        {% else %}
+                        Male
+                        {% endif %}
+
+                    </td>
                 </tr>
                 <tr>
-                  <td>Can I know your Gender?</td>
-                  <td>
-                      {% block content%}
-                      {% if results.gender == '0' %}
-                      Female 
-                      {% else %}
-                      Male
-                      {% endif %}
-                      {% endblock content %}
-                  </td>
+                    <td>What type of chest pain you have?</td>
+                    <td>
+
+                        {% if results['chest-pain-type'] == '1' %}
+                        Typical Agina
+                        {% elif results['chest-pain-type'] == '2' %}
+                        Atypical Agina
+                        {% elif results['chest-pain-type'] == '3' %}
+                        Non-aginal pain
+                        {% else %}
+                        Asymptomatic
+                        {% endif %}
+
+                    </td>
                 </tr>
-              </table>
+                <tr>
+                    <td>Do your exercise induced angina?</td>
+                    <td>
+
+                        {% if results['induced-agina'] == '1' %}
+                        Yes
+                        {% else %}
+                        No
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Is your fasting blood sugar > 120 mg/dl?</td>
+                    <td>
+
+                        {% if results['fasting-blood-sugar'] == '1' %}
+                        Yes
+                        {% else %}
+                        No
+                        {% endif %}
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>What is the slope of your peak exercise ST segment?</td>
+                    <td>{{results['resting-blood-pressure']}}</td>
+                </tr>
+
+                <tr>
+                    <td>What type of chest pain you have?</td>
+                    <td>
+
+                        {% if results['peak-exercise-st'] == '1' %}
+                        Up Sloping
+                        {% elif results['peak-exercise-st'] == '2' %}
+                        Flat
+                        {% else %}
+                        Down Sloping
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>What is your ST depression value, induced by exercise, relative to rest?</td>
+                    <td>{{results['st-depressed-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Tell me the maximum heart-rate achieved by you?</td>
+                    <td>{{results['heart-rate-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Enter your serum cholestrol in mg/dl?</td>
+                    <td>{{results['serum-cholestrol-value']}}</td>
+                </tr>
+
+                <tr>
+                    <td>Which of this is your resting ElectroCardioGraph (ECG)?</td>
+                    <td>
+
+                        {% if results['resting-ecg'] == '0' %}
+                        Normal
+                        {% elif results['resting-ecg'] == '1' %}
+                        Having ST - T wave abnormality
+                        {% else %}
+                        Left ventricular hypertrophy
+                        {% endif %}
+
+                    </td>
+                </tr>
+
+            </table>
 
         </div>
         <div class="prediction">
