@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result: Heart disease diagnosis</title>
+    <link rel="stylesheet" href="/static/style/result.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/"> <span> Home </span></a>
+        <div class="heading">Heart Disease Diagnosis</div>
+    </div>
+
+    <div class="information">
+        <div class="info">
+            <div class="title"> The following information was provided by you:</div>
+
+            <table>
+                <tr>
+                  <th>Question</th>
+                  <th>Answer</th>
+                </tr>
+                <tr>
+                  <td>Can I Know your Age?</td>
+                  <td>{{results.age}}</td>
+                </tr>
+                <tr>
+                  <td>Can I know your Gender?</td>
+                  <td>
+                      {% block content%}
+                      {% if results.gender == '0' %}
+                      Female 
+                      {% else %}
+                      Male
+                      {% endif %}
+                      {% endblock content %}
+                  </td>
+                </tr>
+              </table>
+
+        </div>
+        <div class="prediction">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sit deserunt ex magnam architecto
+            praesentium quae! Distinctio accusamus sit consequuntur assumenda, ea minima! Maxime exercitationem ipsa
+            culpa, nam excepturi reprehenderit?
+        </div>
+    </div>
+
+</body>
+
+</html>

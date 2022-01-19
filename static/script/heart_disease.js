@@ -26,3 +26,14 @@ function replace(hide, show) {
     document.getElementById(hide).style.display = "none";
     document.getElementById(show).style.display = "block";
 }
+
+
+
+function submitForm(h){
+    document.getElementById("form-id").action = "/heart-disease-predictor";
+    document.getElementById(h).style.display = "none"; 
+}
+
+
+
+

@@ -6,259 +6,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style/heart_disease.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Model: Heart Disease Predictor</title>
+
+    <title>Model: Heart Disease Diagnosis</title>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active" href="/"> <span> Home </span></a>
-        <div class="heading">Heart Disease Predictor</div>
+        <div class="heading">Heart Disease Diagnosis</div>
     </div>
     <!-- card structure -->
     <div class="container">
+        <!-- Result form -->
 
-        <!-- Tell me your age  -->
+        <form action="javascript:void(0);" method="post" id="form-id">
+            <!-- Tell me your age  -->
 
-        <div class="main-frame" style="display:block" id="div1">
-            <div class="sub-frame">
-                <div class="question-age">
-                    <div class="question">Can I Know your Age?</div>
-                    <div class="option">
-                        <div class="range-wrap">
-                            <input type="range" name="age" class="range" min="1" max="120">
-                            <output class="bubble"></output>
+            <div class="main-frame" style="display:block" id="div1">
+                <div class="sub-frame">
+                    <div class="question-age">
+                        <div class="question">Can I Know your Age?</div>
+                        <div class="option">
+                            <div class="range-wrap">
+                                <input type="range" name="age" class="range" min="1" max="120">
+                                <output class="bubble"></output>
+                            </div>
                         </div>
+                        <button class="button" onclick="replace('div1','div2')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div1','div2')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Can I know your gender -->
-        <div class="main-frame" id="div2" style="display:none">
-            <div class="sub-frame">
-                <div class="question-gender">
-                    <div class="question">Can I know your Gender?</div>
-                    <div class="option">
-                        <label for="male">
-                            <input type="radio" name="gender" id="male" value="1" checked> <i class="fa fa-male"></i>
-                        </label>
-                        <label for="female">
-                            <input type="radio" name="gender" id="female" value="0"><i class="fa fa-female"></i>
-                        </label>
+            <div class="main-frame" style="display:none" id="result-box">
+                <div class="sub-frame">
+                    <div class="result">
+                        <div class="question">How are You</div>
                     </div>
-                    <button class="button" onclick="replace('div2','div3')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- What type of chest pain you have? -->
-        <div class="main-frame" id="div3" style="display:none">
-            <div class="sub-frame">
-                <div class="question-chest-pain-type">
-                    <div class="question">What type of chest pain you have?</div>
-                    <div class="option">
-                        <div class="col">
-                            <div class="row">
-                                <label for="typical-agina">
-                                    <input type="radio" name="chest-pain-type" id="typical-agina" value="1" checked>
-                                    <p> Typical Agina </p>
-                                </label>
-                            </div>
-                            <div class="row">
-                                <label for="atypical-agina">
-                                    <input type="radio" name="chest-pain-type" id="atypical-agina" value="2">
-                                    <p>Atypical Agina</p>
-                                </label>
-                            </div>
+
+            <!-- Can I know your gender -->
+            <div class="main-frame" id="div2" style="display:none">
+                <div class="sub-frame">
+                    <div class="question-gender">
+                        <div class="question">Can I know your Gender?</div>
+                        <div class="option">
+                            <label for="male">
+                                <input type="radio" name="gender" id="male" value="1" checked> <i
+                                    class="fa fa-male"></i>
+                            </label>
+                            <label for="female">
+                                <input type="radio" name="gender" id="female" value="0"><i class="fa fa-female"></i>
+                            </label>
                         </div>
-                        <div class="col">
-                            <div class="row">
-                                <label for="non-aginal-pain">
-                                    <input type="radio" name="chest-pain-type" id="non-aginal-pain" value="3">
-                                    <p>Non-aginal pain</p>
-                                </label>
-                            </div>
-                            <div class="row">
-                                <label for="Asymptomatic">
-                                    <input type="radio" name="chest-pain-type" id="Asymptomatic" value="4">
-                                    <p> Asymptomatic</p>
-                                </label>
-                            </div>
-                        </div>
+                        <button class="button" onclick="replace('div2','div3')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div3','div4')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Is your fasting blood sugar > 120 mg/dl -->
-
-        <div class="main-frame" id="div4" style="display:none">
-            <div class="sub-frame">
-                <div class="question-fasting-blood-sugar">
-                    <div class="question">Is your fasting blood sugar > 120 mg/dl?</div>
-                    <div class="option">
-                        <div class="col">
-                            <div class="row">
-                                <label for="fbs-yes">
-                                    <input type="radio" name="fasting-blood-sugar" id="fbs-yes" value="1" checked>
-                                    <p> Yes </p>
-                                </label>
+            <!-- What type of chest pain you have? -->
+            <div class="main-frame" id="div3" style="display:none">
+                <div class="sub-frame">
+                    <div class="question-chest-pain-type">
+                        <div class="question">What type of chest pain you have?</div>
+                        <div class="option">
+                            <div class="col">
+                                <div class="row">
+                                    <label for="typical-agina">
+                                        <input type="radio" name="chest-pain-type" id="typical-agina" value="1" checked>
+                                        <p> Typical Agina </p>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label for="atypical-agina">
+                                        <input type="radio" name="chest-pain-type" id="atypical-agina" value="2">
+                                        <p>Atypical Agina</p>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="row">
-                                <label for="fbs-no">
-                                    <input type="radio" name="fasting-blood-sugar" id="fbs-no" value="0">
-                                    <p>No</p>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="button" onclick="replace('div4','div5')"> <span> Next </span> </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Do your exercise induced angina? -->
-
-        <div class="main-frame" id="div5" style="display:none">
-            <div class="sub-frame">
-                <div class="question-induced-agina">
-                    <div class="question">Do your exercise induced angina?</div>
-                    <div class="option">
-                        <div class="col">
-                            <div class="row">
-                                <label for="ag-yes">
-                                    <input type="radio" name="induced-agina" id="ag-yes" value="1" checked>
-                                    <p> Yes </p>
-                                </label>
-                            </div>
-                            <div class="row">
-                                <label for="ag-no">
-                                    <input type="radio" name="induced-agina" id="ag-no" value="0">
-                                    <p>No</p>
-                                </label>
+                            <div class="col">
+                                <div class="row">
+                                    <label for="non-aginal-pain">
+                                        <input type="radio" name="chest-pain-type" id="non-aginal-pain" value="3">
+                                        <p>Non-aginal pain</p>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label for="Asymptomatic">
+                                        <input type="radio" name="chest-pain-type" id="Asymptomatic" value="4">
+                                        <p> Asymptomatic</p>
+                                    </label>
+                                </div>
                             </div>
                         </div>
+                        <button class="button" onclick="replace('div3','div4')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div5','div6')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- what is your resting systolic blood pressure?  -->
-        <div class="main-frame" style="display:none" id="div6">
-            <div class="sub-frame">
-                <div class="question-resting-systolic">
-                    <div class="question">What is your resting systolic blood pressure?</div>
-                    <div class="option">
-                        <div class="range-wrap">
-                            <input type="range" class="range" name="resting-blood-pressure" min="50" max="170">
-                            <output class="bubble"></output>
-                        </div>
-                    </div>
-                    <button class="button" onclick="replace('div6','div7')"> <span> Next </span> </button>
-                </div>
-            </div>
-        </div>
+            <!-- Is your fasting blood sugar > 120 mg/dl -->
 
-        <!-- what is the slope of your peak exercise ST segment? -->
-
-        <div class="main-frame" style="display:none" id="div7">
-            <div class="sub-frame">
-                <div class="question-st-segment">
-                    <div class="question">what is the slope of your peak exercise ST segment?</div>
-                    <div class="option">
-                        <div class="col">
-                            <div class="row">
-                                <label for="upsloping">
-                                    <input type="radio" name="peak-exercise-st" id="upsloping" value="1" checked>
-                                    <p> Up Sloping </p>
-                                </label>
-                            </div>
-                            <div class="row">
-                                <label for="flat">
-                                    <input type="radio" name="peak-exercise-st" id="flat" value="2">
-                                    <p>Flat</p>
-                                </label>
+            <div class="main-frame" id="div4" style="display:none">
+                <div class="sub-frame">
+                    <div class="question-fasting-blood-sugar">
+                        <div class="question">Is your fasting blood sugar > 120 mg/dl?</div>
+                        <div class="option">
+                            <div class="col">
+                                <div class="row">
+                                    <label for="fbs-yes">
+                                        <input type="radio" name="fasting-blood-sugar" id="fbs-yes" value="1" checked>
+                                        <p> Yes </p>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label for="fbs-no">
+                                        <input type="radio" name="fasting-blood-sugar" id="fbs-no" value="0">
+                                        <p>No</p>
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="row">
-                                <label for="downsloping">
-                                    <input type="radio" name="peak-exercise-st" id="downsloping" value="3">
-                                    <p> Down Sloping </p>
-                                </label>
+                        <button class="button" onclick="replace('div4','div5')"> <span> Next </span> </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Do your exercise induced angina? -->
+
+            <div class="main-frame" id="div5" style="display:none">
+                <div class="sub-frame">
+                    <div class="question-induced-agina">
+                        <div class="question">Do your exercise induced angina?</div>
+                        <div class="option">
+                            <div class="col">
+                                <div class="row">
+                                    <label for="ag-yes">
+                                        <input type="radio" name="induced-agina" id="ag-yes" value="1" checked>
+                                        <p> Yes </p>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label for="ag-no">
+                                        <input type="radio" name="induced-agina" id="ag-no" value="0">
+                                        <p>No</p>
+                                    </label>
+                                </div>
                             </div>
                         </div>
+                        <button class="button" onclick="replace('div5','div6')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div7','div8')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-         <!-- What is your ST depression value induced by exercise  -->
-         <div class="main-frame" style="display:none" id="div8">
-            <div class="sub-frame">
-                <div class="question-st-depression">
-                    <div class="question">What is your ST depression value, induced by exercise, relative to rest?</div>
-                    <div class="option">
-                        <div class="range-wrap">
-                            <input type="range" class="range" name="st-depressed-value" min="-10" max="10" step="0.01">
-                            <output class="bubble"></output>
+            <!-- what is your resting systolic blood pressure?  -->
+            <div class="main-frame" style="display:none" id="div6">
+                <div class="sub-frame">
+                    <div class="question-resting-systolic">
+                        <div class="question">What is your resting systolic blood pressure?</div>
+                        <div class="option">
+                            <div class="range-wrap">
+                                <input type="range" class="range" name="resting-blood-pressure" min="50" max="170">
+                                <output class="bubble"></output>
+                            </div>
                         </div>
+                        <button class="button" onclick="replace('div6','div7')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div8','div9')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Tell me the maximum heart-rate achieved by you? -->
-        <div class="main-frame" style="display:none" id="div9">
-            <div class="sub-frame">
-                <div class="question-heart-rate">
-                    <div class="question">Tell me the maximum heart-rate achieved by you?</div>
-                    <div class="option">
-                        <div class="range-wrap">
-                            <input type="range" class="range" name="heart-rate-value" min="50" max="250" >
-                            <output class="bubble"></output>
+            <!-- what is the slope of your peak exercise ST segment? -->
+
+            <div class="main-frame" style="display:none" id="div7">
+                <div class="sub-frame">
+                    <div class="question-st-segment">
+                        <div class="question">what is the slope of your peak exercise ST segment?</div>
+                        <div class="option">
+                            <div class="col">
+                                <div class="row">
+                                    <label for="upsloping">
+                                        <input type="radio" name="peak-exercise-st" id="upsloping" value="1" checked>
+                                        <p> Up Sloping </p>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <label for="flat">
+                                        <input type="radio" name="peak-exercise-st" id="flat" value="2">
+                                        <p>Flat</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <label for="downsloping">
+                                        <input type="radio" name="peak-exercise-st" id="downsloping" value="3">
+                                        <p> Down Sloping </p>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
+                        <button class="button" onclick="replace('div7','div8')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div9','div10')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Enter your serum cholestrol in mg/dl -->
-        <div class="main-frame" style="display:none" id="div10">
-            <div class="sub-frame">
-                <div class="question-serum-cholestrol">
-                    <div class="question">Enter your serum cholestrol in mg/dl?</div>
-                    <div class="option">
-                        <div class="range-wrap">
-                            <input type="range" class="range" name="serum-cholestrol-value" min="0" max="800">
-                            <output class="bubble"></output>
+            <!-- What is your ST depression value induced by exercise  -->
+            <div class="main-frame" style="display:none" id="div8">
+                <div class="sub-frame">
+                    <div class="question-st-depression">
+                        <div class="question">What is your ST depression value, induced by exercise, relative to rest?
                         </div>
+                        <div class="option">
+                            <div class="range-wrap">
+                                <input type="range" class="range" name="st-depressed-value" min="-10" max="10"
+                                    step="0.01">
+                                <output class="bubble"></output>
+                            </div>
+                        </div>
+                        <button class="button" onclick="replace('div8','div9')"> <span> Next </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div10','div11')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Which of this is your resting ElectroCardioGraph (ECG) -->
-        <div class="main-frame" id="div11" style="display:none">
-            <div class="sub-frame">
-                <div class="question-resting-ecg">
-                    <div class="question"> Which of this is your resting ElectroCardioGraph (ECG)?</div>
-                    <div class="option">
-                        <div class="col">
-                            
+            <!-- Tell me the maximum heart-rate achieved by you? -->
+            <div class="main-frame" style="display:none" id="div9">
+                <div class="sub-frame">
+                    <div class="question-heart-rate">
+                        <div class="question">Tell me the maximum heart-rate achieved by you?</div>
+                        <div class="option">
+                            <div class="range-wrap">
+                                <input type="range" class="range" name="heart-rate-value" min="50" max="250">
+                                <output class="bubble"></output>
+                            </div>
+                        </div>
+                        <button class="button" onclick="replace('div9','div10')"> <span> Next </span> </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enter your serum cholestrol in mg/dl -->
+            <div class="main-frame" style="display:none" id="div10">
+                <div class="sub-frame">
+                    <div class="question-serum-cholestrol">
+                        <div class="question">Enter your serum cholestrol in mg/dl?</div>
+                        <div class="option">
+                            <div class="range-wrap">
+                                <input type="range" class="range" name="serum-cholestrol-value" min="0" max="800">
+                                <output class="bubble"></output>
+                            </div>
+                        </div>
+                        <button class="button" onclick="replace('div10','div11')"> <span> Next </span> </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Which of this is your resting ElectroCardioGraph (ECG) -->
+            <div class="main-frame" id="div11" style="display:none">
+                <div class="sub-frame">
+                    <div class="question-resting-ecg">
+                        <div class="question"> Which of this is your resting ElectroCardioGraph (ECG)?</div>
+                        <div class="option">
+                            <div class="col">
+
                                 <label for="ecg-normal">
                                     <input type="radio" name="resting-ecg" id="ecg-normal" value="0" checked>
                                     <p> Normal </p>
                                 </label>
-                            
-                          
+
+
                                 <label for="ecg-abnormal">
                                     <input type="radio" name="resting-ecg" id="ecg-abnormal" value="1">
                                     <p>Having ST - T wave abnormality</p>
@@ -268,13 +283,14 @@
                                     <input type="radio" name="resting-ecg" id="ecg-hyper" value="2">
                                     <p>Left ventricular hypertrophy</p>
                                 </label>
+                            </div>
                         </div>
+                        <button class="button" onclick="submitForm('div11');" <span> Submit </span> </button>
                     </div>
-                    <button class="button" onclick="replace('div11','div1')"> <span> Next </span> </button>
                 </div>
             </div>
-        </div>
-        
+        </form>
+
     </div>
     <script src="/static/script/heart_disease.js"></script>
 </body>
