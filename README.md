@@ -4,7 +4,7 @@ Package dependency
 
 `python -m venv hsd-venv`
 
-`source sklearn-venv/bin/activate`
+`source hsd-venv/bin/activate`
 
 `pip install Flask`
 
