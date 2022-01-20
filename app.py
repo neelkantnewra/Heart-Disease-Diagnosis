@@ -36,11 +36,15 @@ def heartDiseasePredictor():
         resting_ecg = int(result['resting-ecg'])
         element = sc.transform([[age, gender, chest_pain_type, resting_blood_pressure, serum_cholestrol_value,
                                fasting_blood_sugar, resting_ecg, heart_rate_value, induced_agina, st_depression_value, peak_exercise_st]])
-        prediction_prob = model.predict_proba((element)).max()
-        prediction = model.predict((element))
-        print(prediction_prob)
-        print(prediction)
-        return render_template("result.html", results=result, prediction=prediction, prediction_prob=prediction_prob)
+        prediction_prob = int(model.predict_proba((element)).max()*100)
+        prediction = model.predict((element)).max()
+        k = 0
+        if prediction==1:
+            k=1
+        result['prediction'] = k 
+        result['prediction-prob']=prediction_prob
+        
+        return render_template("result.html", results=result)
     return render_template("heart_disease.html")
 
 

@@ -85,3 +85,68 @@ th, td {
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+/* percentage bar*/
+
+.single-chart {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  width:300px;
+  height: 300px;
+
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+  
+/* .circular-chart.orange .circle {
+  stroke: #ff2600;
+} */
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.4em;
+  text-anchor: middle;
+}
+.percentage:hover{
+  font-size: 0.7;
+  transition: font-size 0.3s ease-out;
+}
+
+.predict{
+  padding-left: 100px;
+  padding-top: 50px;
+}
+
+.prediction{
+  display: flex;
+  flex-direction: column;
+}
+
+.predict-prob{
+  padding-left: 100px;
+  font-size: 10px;
+}
