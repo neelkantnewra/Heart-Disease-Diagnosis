@@ -15,6 +15,11 @@
 
 ## To run the file
 
+
+`git clone https://github.com/neelkantnewra/Heart-Disease-Diagnosis.git`
+
+`cd Heart-Disease-Diagnosis`
+
 For linux:
 `source hsd-venv/bin/activate`
 
