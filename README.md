@@ -15,6 +15,10 @@
 
 ## To run the file
 
+For linux:
 `source hsd-venv/bin/activate`
+
+For Windows:
+`hsd-venv\Scripts\activate`
 
 `flask run`
