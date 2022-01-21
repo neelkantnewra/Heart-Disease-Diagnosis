@@ -18,12 +18,23 @@
 
 `git clone https://github.com/neelkantnewra/Heart-Disease-Diagnosis.git`
 
-`cd Heart-Disease-Diagnosis`
 
 For linux:
+
+`python3 -m venv hsd-venv`
+
 `source hsd-venv/bin/activate`
 
+`hsd-venv/bin/python -m pip install -r requirements.txt`
+
+`flask run`
+
 For Windows:
+
+`python -m venv hsd-venv`
+
 `hsd-venv\Scripts\activate`
+
+`hsd-venv\bin\python -m pip install -r requirements.txt`
 
 `flask run`
