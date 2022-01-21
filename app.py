@@ -31,7 +31,7 @@ def heartDiseasePredictor():
         resting_blood_pressure = int(result['resting-blood-pressure'])
         peak_exercise_st = int(result['peak-exercise-st'])
         st_depression_value = float(result['st-depressed-value'])
-        heart_rate_value = int(result['heart-rate-value'])
+        heart_rate_value = int(result['heart-rate-value']) 
         serum_cholestrol_value = int(result['serum-cholestrol-value'])
         resting_ecg = int(result['resting-ecg'])
         element = sc.transform([[age, gender, chest_pain_type, resting_blood_pressure, serum_cholestrol_value,
