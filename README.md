@@ -25,7 +25,7 @@ For linux:
 
 `source hsd-venv/bin/activate`
 
-`hsd-venv/bin/python -m pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
 `flask run`
 
@@ -35,6 +35,6 @@ For Windows:
 
 `hsd-venv\Scripts\activate`
 
-`hsd-venv\bin\python -m pip install -r requirements.txt`
+`pip install -r requirements.txt`
 
 `flask run`
