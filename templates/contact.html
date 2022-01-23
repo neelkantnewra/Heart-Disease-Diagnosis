@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style/contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/"> <span> Home </span></a>
+        <div class="heading">Contact</div>
+    </div>
+
+    <div class="container">
+        <form id="contact-form"method="post" action="https://formspree.io/maypjrkj">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="name" placeholder="Your name.." required>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="email" name="email" placeholder="Your Email.."required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="message" placeholder="Write something.." style="height:200px" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
+          </div> <br><br>
+        </form>
+      </div>
+</body>
+</html>

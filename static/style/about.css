@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Titillium+Web:wght@400&display=swap');
+
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
@@ -42,14 +44,8 @@
     opacity: 1;
     left: 0;
   }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #0704aa;
-    color: white;
-  }
 
-.heading{
+  .heading{
     font-family: "Times New Roman", Times, serif;
     font-size: 26px;
     text-align: center;
@@ -58,5 +54,99 @@
     color: #ffffff;
 }
 
+.about{
+    display: flex;
+    flex-direction: row;
+}
 
+.about-me{
+    
+    font-size: 28px;
+    padding-top: 20px;
+    width: 80%;
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: justify;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.image{
+    padding-top: 20px;
+    width: 100%;
+  height: auto;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
   
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  
+  /* Twitter */
+  .fa-twitter {
+      border-radius: 20px;
+    background: #55ACEE;
+    color: white;
+  }
+
+  .icon{
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+     
+      display: flex;
+      flex-direction: row;
+  }
+
+  .fa-github {
+    border-radius: 20px;
+    background: #000000;
+    color: white;
+   margin-right: 10px;
+  }
+
+  .fa-linkedin {
+    border-radius: 20px;
+    background: #0e76a8;
+    color: white;
+   margin-right: 10px;
+  }
+
+  /* Style buttons */
+.btn {
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(40, 16, 146);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .btn i{
+      font-size: 30px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }

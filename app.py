@@ -47,6 +47,8 @@ def heartDiseasePredictor():
         return render_template("result.html", results=result)
     return render_template("heart_disease.html")
 
-
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,129 @@
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background: rgb(2,0,36);
+    background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgb(255, 255, 255) 100%);
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    border-radius: 20px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #0704aa;
+    color: white;
+  }
+  .topnav span{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .topnav span:after {
+    color: #fff;
+    content: '\276e';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+  }
+ .topnav a:hover span {
+    padding-left: 25px;
+  }
+  .topnav a:hover span:after {
+    opacity: 1;
+    left: 0;
+  }
+
+  .heading{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+
+
+
+
+input[type=text], select, textarea{
+    margin: 12px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #1f2e85;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+      margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  hr{
+    height: 5px;
+    color:#1f2e85;
+    background-color:#1f2e85;
+    border: none;
+  }
+  
