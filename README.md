@@ -12,6 +12,13 @@
 
 
 
+## Task to be done
+
+- [ ] develop it for mobile view
+- [ ] Progress Bar for question
+- [ ] Generate a report in pdf formate
+- [ ] add more disease detection technique 
+
 
 ## To run the file
 
