@@ -33,6 +33,9 @@
     padding-top: 100px;
     display: flex;
     flex-direction: row;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
 }
 .info{
     padding-left: 10px;
@@ -41,15 +44,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    width: 100%;
+    width: 50%;
+    text-align: justify;
   
 }
 
  /* style heart */
 
 .heart{
-    font-size: 455px;
+  
+  margin-left: 5vh;
+    font-size: 50vh;
     color: rgba(43, 45, 153, 0.678);
 }
 
@@ -60,11 +65,73 @@
   @keyframes heart-rotate-before {
     from {
       color: rgba(43, 45, 153, 0.678);
-      font-size: 440px;
+      font-size: 50vh;
     }
   
     to {
       color: rgba(252, 18, 18, 0.863);
-      font-size: 455px;
+      font-size: 51vh;
     }
   }
+
+
+  .topnav .icon {
+    display: none;
+  }
+
+
+ 
+  
+
+  @media screen and (max-width: 600px) {
+    .information{
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+  }
+  .info{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    text-align: justify;
+  
+}
+
+.heart{
+  
+  margin-left: 10vh;
+    font-size: 50vh;
+    color: rgba(43, 45, 153, 0.678);
+}
+
+.heart i:hover{
+    animation: heart-rotate-before 3ms both infinite;
+  }
+
+  @keyframes heart-rotate-before {
+    from {
+      color: rgba(43, 45, 153, 0.678);
+      font-size: 50vh;
+    }
+  
+    to {
+      color: rgba(252, 18, 18, 0.863);
+      font-size: 51vh;
+    }
+  }
+    
+
+
+  }
+
+
+
+  
+
+
