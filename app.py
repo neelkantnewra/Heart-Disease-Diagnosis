@@ -2,8 +2,9 @@ from flask import Flask
 from flask import Flask, render_template, request
 import sklearn
 import pickle
+from assembleModel.modelcombine import combineModel
 
-model = pickle.load(open("static/model/model.sav", 'rb'))
+model1 = pickle.load(open("static/model/model.sav", 'rb'))
 sc = pickle.load(open('static/model/scaler.pkl', 'rb'))
 
 app = Flask(__name__)
@@ -36,10 +37,9 @@ def heartDiseasePredictor():
         resting_ecg = int(result['resting-ecg'])
         element = sc.transform([[age, gender, chest_pain_type, resting_blood_pressure, serum_cholestrol_value,
                                fasting_blood_sugar, resting_ecg, heart_rate_value, induced_agina, st_depression_value, peak_exercise_st]])
-        prediction_prob = int(model.predict_proba((element)).max()*100)
-        prediction = model.predict((element)).max()
+        prediction,prediction_prob = combineModel(models=[model1],element=element)
         k = 0
-        if prediction==1:
+        if prediction>=0.5:
             k=1
         result['prediction'] = k 
         result['prediction-prob']=prediction_prob
