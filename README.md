@@ -16,7 +16,6 @@
 
 
 
-
 ## Task to be done
 
 - [ ] develop it for mobile view
