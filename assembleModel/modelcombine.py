@@ -18,7 +18,7 @@ def combineModel(models:list,element):
     return
     ------
     prediction: combine prediction
-    prediction_prob: combine prediction preobability
+    prediction_prob: combine prediction probability
     '''
     prediction = 0
     prediction_prob = 0
